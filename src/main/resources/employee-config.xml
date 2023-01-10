@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="employee" class="com.example.Employee">
+        <property name="name" value="Elcin"/>
+        <property name="surname" ref="surname"/>
+        <property name="address" ref="address"/>
+    </bean>
+
+    <bean id="address" class="com.example.Address">
+        <property name="city" value="Baku"/>
+    </bean>
+
+
+
+<!--    <bean id="employee" class="com.example.Employee">-->
+<!--        <property name="name" value="Elcin"/>-->
+<!--        <property name="surname" value="Orucleiyev"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="employee" class="com.example.Employee">-->
+<!--        <constructor-arg ref="name" />-->
+<!--        <constructor-arg  ref="surname"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="name" class="java.lang.String">-->
+<!--        <constructor-arg value="Elcin"/>-->
+<!--    </bean>-->
+
+    <bean id="surname" class="java.lang.String" >
+        <constructor-arg value="Orucleiyev"/>
+    </bean>
+
+</beans>
